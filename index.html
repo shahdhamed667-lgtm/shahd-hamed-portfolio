@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shahd Hamed | Front-End Developer</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root{
+    --bg:#050814;
+    --text:#e5e7eb;
+    --muted:#94a3b8;
+    --primary:#38bdf8;
+    --accent:#6366f1;
+    --card:#0f172a;
+    --line:#1f2937;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Inter', sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:var(--bg);
+    color:var(--text);
+    overflow-x:hidden;
+}
+
+/* cinematic glow */
+.glow{
+    position:absolute;
+    width:600px;
+    height:600px;
+    filter:blur(160px);
+    opacity:0.2;
+    border-radius:50%;
+    animation:float 6s ease-in-out infinite;
+}
+
+.glow1{background:#38bdf8; top:5%; left:5%;}
+.glow2{background:#6366f1; bottom:5%; right:5%; animation-delay:2s;}
+
+@keyframes float{
+    0%,100%{transform:translateY(0px);}
+    50%{transform:translateY(-20px);}
+}
+
+/* NAV */
+nav{
+    display:flex;
+    justify-content:space-between;
+    padding:20px 10%;
+    position:sticky;
+    top:0;
+    background:rgba(5,8,20,0.5);
+    backdrop-filter: blur(18px);
+    border-bottom:1px solid var(--line);
+    z-index:10;
+}
+
+nav h2{
+    color:var(--primary);
+    font-weight:800;
+}
+
+nav a{
+    margin-left:18px;
+    color:var(--text);
+    text-decoration:none;
+    font-size:14px;
+    opacity:0.7;
+    transition:0.3s;
+}
+
+nav a:hover{
+    opacity:1;
+    color:var(--primary);
+}
+
+/* HERO */
+.hero{
+    text-align:center;
+    padding:160px 10% 120px;
+    position:relative;
+}
+
+.hero h1{
+    font-size:76px;
+    font-weight:800;
+    background:linear-gradient(135deg,var(--primary),var(--accent));
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    animation:fadeUp 1s ease;
+}
+
+.hero p{
+    margin-top:12px;
+    font-size:18px;
+    color:var(--muted);
+}
+
+.tag{
+    display:inline-block;
+    margin-top:16px;
+    padding:6px 14px;
+    border:1px solid var(--line);
+    border-radius:20px;
+    color:var(--primary);
+    font-size:12px;
+}
+
+.cta{
+    display:inline-block;
+    margin-top:28px;
+    padding:14px 24px;
+    background:linear-gradient(135deg,var(--primary),var(--accent));
+    color:#000;
+    font-weight:800;
+    border-radius:12px;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.cta:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 30px rgba(56,189,248,0.3);
+}
+
+/* SECTIONS */
+section{
+    padding:90px 10%;
+}
+
+h2{
+    color:var(--primary);
+    margin-bottom:20px;
+}
+
+/* CARD */
+.card{
+    background:rgba(15,23,42,0.7);
+    border:1px solid var(--line);
+    padding:24px;
+    border-radius:18px;
+    backdrop-filter: blur(10px);
+    transition:0.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px) scale(1.02);
+    border-color:var(--primary);
+    box-shadow:0 20px 60px rgba(56,189,248,0.1);
+}
+
+/* GRID */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:22px;
+}
+
+/* SKILLS */
+.skills span{
+    display:inline-block;
+    margin:4px;
+    padding:6px 10px;
+    background:#111827;
+    border-radius:8px;
+    font-size:12px;
+}
+
+/* BUTTON */
+.btn{
+    display:inline-block;
+    margin-top:12px;
+    padding:8px 12px;
+    border-radius:10px;
+    border:1px solid var(--primary);
+    color:var(--primary);
+    text-decoration:none;
+    font-size:12px;
+}
+
+.btn:hover{
+    background:var(--primary);
+    color:#000;
+}
+
+/* WHATSAPP */
+.whatsapp{
+    display:inline-block;
+    margin-top:12px;
+    padding:10px 14px;
+    background:#25D366;
+    color:#fff;
+    border-radius:10px;
+    text-decoration:none;
+    font-weight:600;
+}
+
+/* fade animation */
+@keyframes fadeUp{
+    from{opacity:0; transform:translateY(30px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+footer{
+    text-align:center;
+    padding:30px;
+    border-top:1px solid var(--line);
+    color:var(--muted);
+    font-size:12px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="glow glow1"></div>
+<div class="glow glow2"></div>
+
+<nav>
+    <h2>SH</h2>
+    <div>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Work</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
+
+<div class="hero">
+    <h1>Shahd Hamed</h1>
+    <p>Front-End Developer & UI Designer</p>
+    <div class="tag">Cinematic Web Experience</div><br>
+    <a class="cta" href="#projects">Explore Work</a>
+</div>
+
+<section id="about">
+    <h2>About Me</h2>
+    <div class="card">
+        Front-End Developer passionate about crafting cinematic, modern, and interactive web experiences with clean UI and smooth UX.
+    </div>
+</section>
+
+<section id="skills">
+    <h2>Skills</h2>
+    <div class="card skills">
+        <span>HTML5</span>
+        <span>CSS3</span>
+        <span>JavaScript</span>
+        <span>Responsive Design</span>
+        <span>UI/UX</span>
+        <span>Git</span>
+    </div>
+</section>
+
+<section id="projects">
+    <h2>Projects</h2>
+
+    <div class="grid">
+        <div class="card">
+            <h3>E-Commerce UI</h3>
+            <p>High-end shopping experience design.</p>
+            <a class="btn" href="#">View</a>
+        </div>
+
+        <div class="card">
+            <h3>Dashboard UI</h3>
+            <p>Modern admin panel system.</p>
+            <a class="btn" href="#">View</a>
+        </div>
+
+        <div class="card">
+            <h3>Auth Flow</h3>
+            <p>Login/signup cinematic UI.</p>
+            <a class="btn" href="#">View</a>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact</h2>
+
+    <div class="card">
+        <p><b>Email:</b> shahd.hamed667@gmail.com</p>
+        <p><b>Phone:</b> 01063003640</p>
+
+        <a class="whatsapp" href="https://wa.me/201063003640" target="_blank">
+            💬 WhatsApp Me
+        </a>
+
+        <br><br>
+        <a class="btn" href="mailto:shahd.hamed667@gmail.com">Send Email</a>
+    </div>
+</section>
+
+<footer>
+    © 2026 Shahd Hamed — Cinematic Portfolio
+</footer>
+
+</body>
+</html>
