@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shahd Hamed | Front-End Developer</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root{
+    --bg:#050814;
+    --card:#0f172a;
+    --text:#e5e7eb;
+    --muted:#94a3b8;
+    --primary:#38bdf8;
+    --accent:#6366f1;
+    --line:#1f2937;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Inter', sans-serif;
+}
+
+body{
+    background:var(--bg);
+    color:var(--text);
+    overflow-x:hidden;
+}
+
+/* background glow */
+.glow{
+    position:absolute;
+    width:500px;
+    height:500px;
+    filter:blur(140px);
+    opacity:0.25;
+    border-radius:50%;
+    z-index:0;
+}
+
+.glow1{background:#38bdf8; top:5%; left:5%;}
+.glow2{background:#6366f1; bottom:5%; right:5%;}
+
+/* NAV */
+nav{
+    position:sticky;
+    top:0;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 10%;
+    background:rgba(5,8,20,0.6);
+    backdrop-filter: blur(16px);
+    border-bottom:1px solid var(--line);
+    z-index:10;
+}
+
+nav h2{
+    font-weight:800;
+    color:var(--primary);
+    letter-spacing:1px;
+}
+
+nav a{
+    margin-left:18px;
+    text-decoration:none;
+    color:var(--text);
+    font-size:14px;
+    opacity:0.8;
+}
+
+nav a:hover{
+    color:var(--primary);
+    opacity:1;
+}
+
+/* HERO */
+.hero{
+    position:relative;
+    text-align:center;
+    padding:160px 10% 120px;
+    z-index:1;
+}
+
+.hero h1{
+    font-size:74px;
+    font-weight:800;
+    background:linear-gradient(135deg,var(--primary),var(--accent));
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    animation:fade 1s ease;
+}
+
+.hero p{
+    margin-top:12px;
+    font-size:18px;
+    color:var(--muted);
+}
+
+.tag{
+    display:inline-block;
+    margin-top:18px;
+    padding:6px 14px;
+    border:1px solid var(--line);
+    border-radius:20px;
+    font-size:12px;
+    color:var(--primary);
+}
+
+.cta{
+    display:inline-block;
+    margin-top:28px;
+    padding:14px 22px;
+    background:linear-gradient(135deg,var(--primary),var(--accent));
+    color:#000;
+    font-weight:700;
+    border-radius:12px;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.cta:hover{
+    transform:translateY(-5px) scale(1.03);
+}
+
+/* SECTIONS */
+section{
+    padding:90px 10%;
+}
+
+h2{
+    color:var(--primary);
+    font-size:26px;
+    margin-bottom:20px;
+}
+
+/* CARD */
+.card{
+    background:rgba(15,23,42,0.75);
+    border:1px solid var(--line);
+    padding:24px;
+    border-radius:18px;
+    transition:0.4s;
+    backdrop-filter: blur(10px);
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    border-color:var(--primary);
+    box-shadow:0 20px 60px rgba(56,189,248,0.08);
+}
+
+/* GRID */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:22px;
+}
+
+/* SKILLS */
+.skills span{
+    display:inline-block;
+    margin:4px;
+    padding:6px 10px;
+    background:#111827;
+    border-radius:8px;
+    font-size:12px;
+}
+
+/* BUTTON */
+.btn{
+    display:inline-block;
+    margin-top:14px;
+    padding:8px 12px;
+    border-radius:10px;
+    border:1px solid var(--primary);
+    color:var(--primary);
+    text-decoration:none;
+    font-size:12px;
+}
+
+.btn:hover{
+    background:var(--primary);
+    color:#000;
+}
+
+/* CONTACT */
+.contact p{
+    margin:8px 0;
+    color:var(--muted);
+}
+
+/* WHATSAPP */
+.whatsapp{
+    display:inline-block;
+    margin-top:14px;
+    padding:10px 14px;
+    background:#25D366;
+    color:#fff;
+    border-radius:10px;
+    text-decoration:none;
+    font-weight:600;
+}
+
+/* animation */
+@keyframes fade{
+    from{opacity:0; transform:translateY(20px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+footer{
+    text-align:center;
+    padding:30px;
+    border-top:1px solid var(--line);
+    color:var(--muted);
+    font-size:12px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="glow glow1"></div>
+<div class="glow glow2"></div>
+
+<nav>
+    <h2>SH</h2>
+    <div>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Work</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
+
+<div class="hero">
+    <h1>Shahd Hamed</h1>
+    <p>Front-End Developer & UI Designer</p>
+    <div class="tag">Building modern digital experiences</div><br>
+    <a class="cta" href="#projects">Explore Work</a>
+</div>
+
+<section id="about">
+    <h2>About Me</h2>
+    <div class="card">
+        Computer and Information student passionate about building world-class web interfaces.
+        I focus on clean UI, performance, and creating smooth user experiences using modern front-end technologies.
+    </div>
+</section>
+
+<section id="skills">
+    <h2>Core Skills</h2>
+    <div class="card skills">
+        <span>HTML5</span>
+        <span>CSS3</span>
+        <span>JavaScript</span>
+        <span>Responsive Design</span>
+        <span>UI/UX Principles</span>
+        <span>Git & GitHub</span>
+        <span>Figma</span>
+    </div>
+</section>
+
+<section id="projects">
+    <h2>Selected Case Studies</h2>
+
+    <div class="grid">
+
+        <div class="card">
+            <h3>E-Commerce Experience</h3>
+            <p>Modern shopping UI designed for conversion, performance and user flow.</p>
+            <a class="btn" href="#">View Case Study</a>
+        </div>
+
+        <div class="card">
+            <h3>SaaS Dashboard System</h3>
+            <p>Scalable admin dashboard with clean structure and reusable components.</p>
+            <a class="btn" href="#">View Case Study</a>
+        </div>
+
+        <div class="card">
+            <h3>Authentication Flow UI</h3>
+            <p>Secure and intuitive login/register experience with modern UX principles.</p>
+            <a class="btn" href="#">View Case Study</a>
+        </div>
+
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Let’s Work Together</h2>
+
+    <div class="card contact">
+        <p><b>Email:</b> shahd.hamed667@gmail.com</p>
+        <p><b>Phone:</b> 01063003640</p>
+
+        <a class="whatsapp" href="https://wa.me/201063003640" target="_blank">
+            💬 Contact on WhatsApp
+        </a>
+
+        <br><br>
+        <a class="btn" href="mailto:shahd.hamed667@gmail.com">Send Email</a>
+    </div>
+</section>
+
+<footer>
+    © 2026 Shahd Hamed — Crafted with precision & modern UI principles
+</footer>
+
+</body>
+</html>
